@@ -1,0 +1,14 @@
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.AssemblyInfoInputs.cache
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.AssemblyInfo.cs
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.csproj.CoreCompileInputs.cache
+C:\Users\jamg1\source\repos\aStack\aStack\bin\Debug\net7.0\aStack.exe
+C:\Users\jamg1\source\repos\aStack\aStack\bin\Debug\net7.0\aStack.deps.json
+C:\Users\jamg1\source\repos\aStack\aStack\bin\Debug\net7.0\aStack.runtimeconfig.json
+C:\Users\jamg1\source\repos\aStack\aStack\bin\Debug\net7.0\aStack.dll
+C:\Users\jamg1\source\repos\aStack\aStack\bin\Debug\net7.0\aStack.pdb
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.dll
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\refint\aStack.dll
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.pdb
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\aStack.genruntimeconfig.cache
+C:\Users\jamg1\source\repos\aStack\aStack\obj\Debug\net7.0\ref\aStack.dll
