@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace aStack
 {
-    public class humbleStack   
+    public class humbleStack<T> : IEnumerable<T>
     {
-        private Nodo? headNode = null;
+        private Nodo<T>? headNode = null;
         private int count;
         public int Count { get { return count; } }
 
@@ -19,24 +19,24 @@ namespace aStack
             headNode = null;
             count = 0;
         }
-        public string Push(string value)
+        public T Push(T value)
         {
             if(headNode == null)
             {
-                headNode = new Nodo(value);
+                headNode = new Nodo<T>(value);
                 count++;
                 return headNode.valor;
             }
 
-            Nodo newNode = new Nodo(value, headNode);
+            Nodo<T> newNode = new Nodo<T>(value, headNode);
             headNode = newNode;
             count++;
             return headNode.valor;
 
         }
-        public string Pop()
+        public T Pop()
         {
-            if (headNode == null) { return "stack is empty."; }
+            if (headNode == null) { return default(T); }
             if (headNode.nodoSiguiente == null) {
                 var temporal = headNode.valor;
                 Clear();
@@ -48,37 +48,49 @@ namespace aStack
             return temp;
 
         }
-        public string Peek()
+        public T Peek()
         {
-            if (headNode == null) { return "stack is empty."; }
+            if (headNode == null) { return default(T); }
             return headNode.valor;
         }
         public bool Exists(string key)
         {
             if (count == 0) { return false; }
-            Nodo temporal = headNode;
+            Nodo<T> temporal = headNode;
             while (true)
             {
-                if (temporal.valor == key) { return true; }
+                if (temporal.valor.Equals(key)) { return true; }
 
                 temporal = temporal.nodoSiguiente;
 
                 if(temporal == null) { return false; }
             }
         }
+        public IEnumerator<T> GetEnumerator()
+        {
+            Nodo<T>? current = headNode;
+            while (current != null)
+            {
+                yield return current.valor;
+                current = current.nodoSiguiente;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
     }
 
-    public class Nodo
+    public class Nodo<U>
     {
-        public Nodo? nodoSiguiente = null;
-        public string valor;
-        public Nodo(string Valor, Nodo Siguiente)
+        public Nodo<U>? nodoSiguiente = null;
+        public U valor;
+        
+        public Nodo(U Valor, Nodo<U> Siguiente)
         {
             valor = Valor;
             nodoSiguiente = Siguiente;
         }
-        public Nodo(string Valor)
+        public Nodo(U Valor)
         {
             valor = Valor;
         }
